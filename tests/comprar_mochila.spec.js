@@ -6,8 +6,8 @@ const { test, expect } = require("@playwright/test");
 // Um script pode executar de forma Assíncrona (passo a passo aguardando as respostas)
 test("Realizar o fluxo de compra da mochila", async ({ page }) => {
 
-    await page.goto("https://www.saucedemo.com"); // abre o browser no site alvo
-    await expect(page).toHaveURL("https://www.saucedemo.com"); // verifica se está na página raiz
+    await page.goto('/'); // abre o browser no site alvo
+    await expect(page).toHaveURL('/'); // verifica se está na página raiz
     
     const botao_login = page.locator("#login-button");
     
