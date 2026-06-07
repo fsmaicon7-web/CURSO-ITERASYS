@@ -37,16 +37,14 @@ return runDir
 
 }
 
-// Cria subpastas dentro da estrutura
+// Cria subpastas dentro da estrutura de datas e horas
  function ensure_subdiers(runDir){
      const dirs = {
         runDir,
+        resultsDir: path.join(runDir, 'test-results'),
         screenshotsDir: path.join(runDir, 'screenshots')
-    
     }
-
-  
-
+    
 Object.values(dirs).forEach(d=>{ //d = diretorio
     if (!fs.existsSync(d)) fs.mkdirSync(d,{recursive: true})
 })
